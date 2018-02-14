@@ -1,0 +1,154 @@
+﻿
+// VARIABLES
+$darkGrey: #161616;
+$elHeight: 50px;
+
+// MIXIN
+@mixin DisplayFlex {
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------- */
+
+body {
+    font-family: Helvetica-Normal, sans-serif;
+}
+
+
+// Task 1 + Task 2
+
+h1, h3 {
+    text-align: center;
+}
+
+.flex-container, .flex-container-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 300px;
+
+}
+
+// NESTING
+.flex-item { 
+    .flex-item-2 {
+    flex-basis: 200px;
+    align-self: center;
+    }
+}
+
+.flex-item {
+    background-color: #bec6fb;
+}
+
+.flex-item-2 {
+    background-color: #76b973;
+    
+}
+
+
+// Task 3
+
+.flex-container-all {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-container, .image-text-container, .p-banner-container, .p-container, .banner-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container, .image-text-container, .text-container h3, .p-banner-container, .p-1 p, .p-2 p, .footer {
+    margin: 20px;
+}
+
+// Row 1
+
+.nav-container {
+    flex-direction: row;
+    height: $elHeight;
+}
+
+// NESTING
+.nav-logo {
+    display: flex;
+    flex-basis: 8%;
+
+    img {
+        max-height: $elHeight;
+        margin: auto;
+    }
+}
+
+.nav-bar {
+    background-color: $darkGrey;
+    flex-basis: 90%;
+}
+
+// EXTEND
+p {
+    color: white;
+    @extend h1, h3; // text-align: center;
+}
+
+// Row 2
+
+.image-text-container {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.img-container {
+  flex-basis: 50%;
+}
+
+img {
+    max-width: 100%
+}
+
+.text-container {
+    flex-basis: 47%;
+    background: #e0e0e0;
+    flex-direction: column;
+    @include DisplayFlex; // INCLUDES MIXIN
+}
+
+// Row 3
+
+.p-banner-container {
+    flex-direction: row;
+}
+
+.p-container {
+    flex-basis: 72%;
+}
+
+.p-1, .p-2 {
+    flex-basis: 48%;
+    background-color: #f2f2f2;
+
+    p {
+        color: black;
+    }
+}
+
+.banner-container {
+    flex-direction: column;
+    flex-basis: 25%;
+}
+
+.b-1, .b-2, .b-3 {
+    background-color: #8a6ab5;
+    height: $elHeight;
+}
+
+// Row 4
+.footer {
+    height: $elHeight;
+    background-color: $darkGrey;
+    @include DisplayFlex; // INCLUDES MIXIN
+}

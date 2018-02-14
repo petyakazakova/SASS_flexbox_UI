@@ -1,0 +1,117 @@
+﻿
+// Task 1 - fluid layout
+
+@media screen and (max-width: 480px) {
+   .flex-container, .flex-container-2 {
+       align-items: center;
+       flex-direction: column;
+       height: 500px;
+   }
+
+   .flex-item, .flex-item-2 {
+       flex-basis: 70px;
+       width: 80%;
+   }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .flex-item {
+        flex-basis: 45%;
+        align-self: center;
+        height: 70px;
+    }
+
+    .flex-container-2 {
+        width: 490px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .flex-item {
+        flex-basis: 30%;
+        align-self: center;
+        height: 70px;
+    }
+
+}
+
+@media screen and (min-width: 1201px) {
+    .flex-container {
+        width: 900px; 
+        margin: auto;
+    }
+
+    .flex-item {
+        flex-basis: 30%;
+        align-self: center;
+        height: 70px;
+    }
+ 
+}
+
+// Task 2 - Adaptive
+
+@media screen and (min-width: 481px) {
+    .flex-container-2 {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .flex-item-2 {
+       min-width: 240px;
+        align-self: center;
+        height: 70px;
+    }
+}
+
+// Task 3 - Mixed
+
+@media screen and (max-width: 780px) {
+   .nav-container {
+       justify-content: space-around;
+   }
+    
+    .p-2, .b-2, .b-3, .nav-bar {
+        display: none;
+    }
+
+    .image-text-container, .p-banner-container {
+        flex-direction: column;
+    }
+
+    .p-1 {
+        flex-basis: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 781px) and (max-width: 960px) {
+    .nav-container {
+        justify-content: space-around;
+    }
+    
+    
+    .image-text-container, .p-banner-container {
+        flex-direction: column;
+    }
+
+    .banner-container {
+        flex-direction: row;
+    }
+
+    .b-1, .b-2, .b-3 {
+        width: 30%;
+    }
+
+    .p-1, .p-2 {
+        margin-bottom: 20px;
+        flex-basis: 49%;
+
+    }
+}
+
+@media screen and (min-width: 961px)  {
+    .image-text-container {
+        flex-direction: row-reverse;
+    }
+}

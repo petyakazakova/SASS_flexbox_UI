@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "FinalStyle.css",
+    "inputFile": "FinalStyle.scss"
+  },
+  {
+    "outputFile": "_mediaQuery.css",
+    "inputFile": "FinalStyle.scss"
+  },
+  {
+    "outputFile": "_mediaQuery.css",
+    "inputFile": "_mediaQuery.scss"
+  }
+]
